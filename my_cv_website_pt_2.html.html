@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Olifant - Interactive CV</title>
+  <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: linear-gradient(180deg, #f5f5f5, #e6e6e6);
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #555;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a.active {
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    /* Section Styling */
+    section {
+      min-height: 100vh;
+      padding: 80px 20px 20px; /* Added top padding to offset navbar */
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    ul li {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Bold Text Styling */
+    td:first-child, th {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#personal" id="nav-personal">Personal Information</a>
+    <a href="#education" id="nav-education">Education</a>
+    <a href="#skills" id="nav-skills">Skills</a>
+    <a href="#employment" id="nav-employment">Employment History</a>
+    <a href="#references" id="nav-references">References</a>
+  </nav>
+
+  <section id="personal">
+    <h1>Personal Information</h1>
+    <table>
+      <tr><th>Field</th><th>Details</th></tr>
+      <tr><td>Address:</td><td>29 Ararat Street, Westdene</td></tr>
+      <tr><td>Mobile:</td><td>081 763 4530</td></tr>
+      <tr><td>Email:</td><td>matthew.olifant2@icloud.com</td></tr>
+      <tr><td>Gender:</td><td>Male</td></tr>
+      <tr><td>Nationality:</td><td>South African</td></tr>
+      <tr><td>Languages:</td><td>English & Afrikaans</td></tr>
+    </table>
+  </section>
+
+  <section id="education">
+    <h1>Education</h1>
+    <p><strong>Last School Attended:</strong> Hoerskool Marais Viljoen</p>
+    <p><strong>Highest Grade Passed:</strong> Grade 12</p>
+    <h2>Subjects Passed</h2>
+    <ul>
+      <li>English</li>
+      <li>Afrikaans</li>
+      <li>Mathematics</li>
+      <li>Life Orientation</li>
+      <li>Physical Science</li>
+      <li>Computer Application Technology</li>
+      <li>Tourism</li>
+    </ul>
+    <p><strong>Year Obtained:</strong> 2021</p>
+  </section>
+
+  <section id="skills">
+    <h1>Skills</h1>
+    <ul>
+      <li>Copywriting</li>
+      <li>Computer literate (Microsoft Office tools)</li>
+      <li>Intermediate understanding of psychology concepts</li>
+    </ul>
+  </section>
+
+  <section id="employment">
+    <h1>Employment History</h1>
+    <h2>Spitz Sandton City</h2>
+    <p><strong>Period of Service:</strong> 01 November 2024 to 31 December 2024</p>
+    <p><strong>Position:</strong> Peak Student Position</p>
+    <p><strong>Duties:</strong></p>
+    <ul>
+      <li>Handling sales on the sales floor & ordering items for customers</li>
+      <li>Accessing intranet to modify the stockroom</li>
+      <li>Organizing the stockroom</li>
+      <li>Receiving and opening stock</li>
+      <li>Restocking and maintaining the sales floor</li>
+      <li>Basic cleaning duties every morning</li>
+    </ul>
+    <h2>CMA Car Wash</h2>
+    <p><strong>Period of Service:</strong> 01 August 2020 to 26 September 2021</p>
+    <p><strong>Position:</strong> Car Valeting</p>
+    <p><strong>Duties:</strong></p>
+    <ul>
+      <li>Car wash and vacuum</li>
+      <li>Engine cleaning</li>
+      <li>Vehicle polishing</li>
+      <li>Valet</li>
+    </ul>
+    <h2>Joshua Generation Full Gospel Church</h2>
+    <p><strong>Period of Service:</strong> 1 January 2018 to 27 February 2021</p>
+    <p><strong>Position:</strong> Youth Leader</p>
+    <p><strong>Duties:</strong></p>
+    <ul>
+      <li>Organizing regular social, educational, and spiritual events</li>
+      <li>Collaborating with parents and volunteers</li>
+    </ul>
+  </section>
+
+  <section id="references">
+    <h1>References</h1>
+    <h2>Bridgette</h2>
+    <p><strong>Position:</strong> Store Manager</p>
+    <p><strong>Company:</strong> Spitz Sandton</p>
+    <p><strong>Contact:</strong> 067-909-0724</p>
+    <h2>Mrs. Van der Lith</h2>
+    <p><strong>Position:</strong> Educator</p>
+    <p><strong>Company:</strong> Hoerskool Marais Viljoen</p>
+    <p><strong>Contact:</strong> 011 907 1038</p>
+    <h2>Rev. Samuel</h2>
+    <p><strong>Position:</strong> Pastor</p>
+    <p><strong>Company:</strong> Joshua Generation Full Gospel Church</p>
+    <p><strong>Contact:</strong> 072-113-4839</p>
+  </section>
+
+  <script>
+    // Highlight navigation bar item on scroll
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 50;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.id === `nav-${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Fade-in and fade-out effect
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
